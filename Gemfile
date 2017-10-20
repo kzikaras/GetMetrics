@@ -21,6 +21,7 @@ group :development, :test do
   gem 'rails-controller-testing'
   gem 'factory_girl_rails', '~> 4.0'
   gem 'listen'
+  gem "letter_opener"
 end
 
 # Use SCSS for stylesheets
@@ -40,3 +41,5 @@ gem 'bootstrap-sass'
 gem 'bcrypt'
 
 gem 'figaro', '1.0'
+
+gem 'devise'
