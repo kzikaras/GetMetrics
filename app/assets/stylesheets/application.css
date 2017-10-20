@@ -18,3 +18,9 @@
  .set-max-width {
      max-width: 110rem;
  }
+
+ .center {
+     margin-left: auto;
+     margin-right: auto;
+     text-align: center;
+ }
