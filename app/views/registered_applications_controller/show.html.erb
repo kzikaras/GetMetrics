@@ -1,4 +1,8 @@
-<h1>RegisteredApplicationsController#read</h1>
-<p>Find me in app/views/registered_applications_controller/read.html.erb</p>
-
+<div class="center">
+<h1><%= @application.name %></h1>
+<br>
+<h1>DATA WILL GO HERE</h1>
+<%= link_to "Delete App", {"id"=> @application.id, "controller"=>"registered_applications_controller", "action"=>"destroy"}, class:"btn btn-danger btn-lg", method: :delete %>
+<br>
 <%= params %>
+</div>

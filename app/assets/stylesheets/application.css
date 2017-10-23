@@ -14,9 +14,27 @@
  *= require_self
  */
 
+ html {
+     height: 100%;
+ }
+
+ body {
+     background-image: url("https://images.unsplash.com/photo-1495639867387-5423d6811583?w=1350");
+     background-size: cover;
+     height: 100%;
+     color: white;
+ }
+
+ .jumbotron {
+     background-color: rgba(255, 255, 255, 0.40)
+ }
 
  .set-max-width {
      max-width: 110rem;
+ }
+
+ .set-content-max-width {
+     max-width: 50rem;
  }
 
  .center {
