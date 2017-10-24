@@ -1,8 +1,0 @@
-<h1 class="center">Dashboard</h1>
-<div class="center">
-    <%= link_to "New Application", registered_applications_controller_new_path, class:"btn btn-success btn-lg" %>
-    <h1 class="center">Your Registered Applications</h1>
-    <% current_user.applications.each do |application| %>
-        <h2><%= link_to application.name, {"id"=>application, "controller"=>"registered_applications_controller", "action"=>"show"} %><br></h2>
-    <% end %>
-</div>

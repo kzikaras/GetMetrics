@@ -1,6 +1,6 @@
 require 'rails_helper'
 
-RSpec.describe RegisteredApplicationsControllerController, type: :controller do
+RSpec.describe RegisteredApplicationsController, type: :controller do
 
   describe "GET #create" do
     it "returns http success" do

@@ -1,3 +1,4 @@
 class Application < ApplicationRecord
-  belongs_to :User
+  belongs_to :user
+  has_many :events
 end

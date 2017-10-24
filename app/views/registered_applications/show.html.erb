@@ -1,0 +1,11 @@
+<div class="center">
+<h1>Application: <%= @application.name %></h1>
+<br>
+<h1>Events</h1>
+<% @application.events.each do |event| %>
+    <h2><%= event.event_name %> | Count: <%= event.count %></h2><br>
+<% end %>
+<%= link_to "Delete App", registered_application_path(@application), class:"btn btn-danger btn-lg", method: :delete %>
+<br>
+
+</div>

@@ -22,6 +22,7 @@ group :development, :test do
   gem 'factory_girl_rails', '~> 4.0'
   gem 'listen'
   gem "letter_opener"
+  gem "faker"
 end
 
 # Use SCSS for stylesheets

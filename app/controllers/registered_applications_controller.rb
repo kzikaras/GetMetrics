@@ -1,4 +1,4 @@
-class RegisteredApplicationsControllerController < ApplicationController
+class RegisteredApplicationsController < ApplicationController
 
   def index
     @application = Application.all
@@ -34,6 +34,7 @@ class RegisteredApplicationsControllerController < ApplicationController
 
   def show
     @application = Application.find(params[:id])
+    @events = @application.events.group_by(&:event_name)
   end
 
   def update
