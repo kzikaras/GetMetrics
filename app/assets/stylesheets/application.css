@@ -24,11 +24,29 @@
      background-size: cover;
      height: 100%;
      color: white;
+     text-shadow: 1px 1px #000000;
  }
 
- .jumbotron {
-     background-color: rgba(255, 255, 255, 0.40)
+ input {
+     color: black;
  }
+
+ a {
+     color: white;
+ }
+
+.email {
+    color: black;
+    font-size: 18px;
+}
+
+ .jumbotron {
+     background-color: rgba(255, 255, 255, 0.30)
+ }
+
+.left-item {
+    margin-top: 8px;
+}
 
  .set-max-width {
      max-width: 110rem;
@@ -42,4 +60,8 @@
      margin-left: auto;
      margin-right: auto;
      text-align: center;
+ }
+
+ .form {
+     width: 75%;
  }
