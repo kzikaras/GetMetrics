@@ -1,7 +1,7 @@
 class API::EventsController < ApplicationController
 
     skip_before_action :verify_authenticity_token
-    before_filter :set_access_control_headers
+    before_action :set_access_control_headers
     
     def set_access_control_headers
         # #1
@@ -13,19 +13,24 @@ class API::EventsController < ApplicationController
     end
 
     def create
-        event_params
         @registered_application = Application.find_by(URL: request.env['HTTP_ORIGIN'])
-        
+
         if @registered_application == nil
-            render json: "Unregistered application", status: :unprocessable_entity
+            render json: "Unregistered application", status: :unprocessable_entity and return #Needed to add "and return" in order to pass this line of code, otherwise received a doublerender error
         end
 
-        if @registered_application.save
+
+        @event = Event.new(event_params) 
+        @event.application = @registered_application
+        
+        
+
+        if @event.save
             render json: @event, status: :created
-            p "success!"
+            
         else
             render json: {errors: @event.errors}, status: :unprocessable_entity
-            p "no success!"
+            
         end
     end
 
@@ -36,7 +41,7 @@ class API::EventsController < ApplicationController
 
     private
     def event_params
-        params.require(:event).permit(:name)
+        params.require(:event).permit(:event_name)
     end
 
 end
