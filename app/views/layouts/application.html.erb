@@ -3,10 +3,11 @@
   <head>
     <title>Blocmetrics</title>
     <%= csrf_meta_tags %>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
-    
+    <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
   </head>
 
   <body>
@@ -26,13 +27,20 @@
         <!-- Collect the nav links, forms, and other content for toggling -->
         <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
           <ul class="nav navbar-nav">
-    
           </ul>
-          <ul class="nav navbar-nav navbar-right">
+          <div class="nav navbar-nav navbar-right left-item">
+            
+            <% if current_user %>
+                <div class="email"><%= current_user.email %> |
+                <%= link_to "Sign Out", destroy_user_session_path, class:"btn btn-danger btn-smf", :method => :delete %></div>
+            <% else %>
+                <%= link_to "Sign Up!", new_user_registration_path, class:"btn btn-primary" %>
+                <%= link_to "Sign In!", new_user_session_path, class:"btn btn-success" %>
+            <% end %>
+            <%# <li><a href="#">Future Link</a></li>
             <li><a href="#">Future Link</a></li>
-            <li><a href="#">Future Link</a></li>
-            <li><a href="#">Future Link</a></li>
-          </ul>
+            <li><a href="#">Future Link</a></li> %>
+          </div>
         </div><!-- /.navbar-collapse -->
       </div><!-- /.container-fluid -->
     </nav>
@@ -58,6 +66,5 @@
 
 
 
-  
   </body>
 </html>

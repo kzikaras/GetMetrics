@@ -27,7 +27,7 @@ end
 applications = Application.all
 
 5.times do
-    Event.create!(
+    Event.create!.event_params(
         application: applications.sample,
         event_name: Faker::LordOfTheRings.location,
         count: 5

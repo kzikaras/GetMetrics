@@ -2,8 +2,8 @@
     <div class="jumbotron">
         <div class="container">
             <% if current_user %>
-                <h1>Hi! <%= current_user.email %></h1>
-                <%= link_to "Sign Out", destroy_user_session_path, class:"btn btn-danger btn-lg", :method => :delete %>
+                <h1>Welcome to BlocMetrics!</h1>
+                <p>Your new favorite analytics app!</p>
                 <%= link_to "Dashboard", registered_applications_path, class:"btn btn-success btn-lg" %>
             <% else %>
                 <h1>Welcome to BlocMetrics!</h1>
