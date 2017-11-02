@@ -13,6 +13,7 @@ class API::EventsController < ApplicationController
     end
 
     def create
+        
         @registered_application = Application.find_by(URL: request.env['HTTP_ORIGIN'])
 
         if @registered_application == nil
@@ -22,6 +23,7 @@ class API::EventsController < ApplicationController
 
         @event = Event.new(event_params) 
         @event.application = @registered_application
+        
         
         
 
