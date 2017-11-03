@@ -20,11 +20,11 @@
 
  body {
      font-family: 'Roboto', sans-serif;
-     background-image: url("https://images.unsplash.com/photo-1495639867387-5423d6811583?w=1350");
+     background-image: url("https://images.unsplash.com/photo-1485738344851-01d65fb50521?auto=format&fit=crop&w=1950&q=60&ixid=dW5zcGxhc2guY29tOzs7Ozs%3D");
      background-size: cover;
      height: 100%;
      color: white;
-     text-shadow: 1px 1px #000000;
+     text-shadow: .4px .4px #000000;
  }
 
  input {
@@ -35,8 +35,10 @@
      color: white;
  }
 
+
+
 .email {
-    color: black;
+    color: white;
     font-size: 18px;
 }
 
@@ -62,6 +64,16 @@
      text-align: center;
  }
 
- .form {
-     width: 75%;
- }
+.navbar-toggle {
+    color: white;
+}
+
+.border {
+    border-bottom: 1px solid gray;
+    padding: 4px;
+    display: inline;
+}
+
+.marg-top {
+    padding-top: 8px;
+}

@@ -1,11 +1,12 @@
 <div class="center">
-<h1>Application: <%= @application.name %></h1>
+<h1 class="border">Application: <%= @application.name %></h1>
 <br>
 <h1>Events</h1>
-<% @application.events.each do |event| %>
-    <h2>New Event!</h2><br>
-<% end %>
-<%= link_to "Delete App", registered_application_path(@application), class:"btn btn-danger btn-lg", method: :delete %>
+<div class="data center set-max-width">
+    <%= pie_chart @application.events.group(:event_name).count, library: {backgroundColor: "#000"} %>
+    <%= line_chart @application.events.group_by_day(:created_at).count %><br>
+    <%= link_to "Delete App", registered_application_path(@application), class:"btn btn-danger btn-lg", method: :delete %>
+</div>
 <br>
 
 </div>

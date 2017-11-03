@@ -20,7 +20,7 @@ class API::EventsController < ApplicationController
             render json: "Unregistered application", status: :unprocessable_entity and return #Needed to add "and return" in order to pass this line of code, otherwise received a doublerender error
         end
 
-
+        
         @event = Event.new(event_params) 
         @event.application = @registered_application
         

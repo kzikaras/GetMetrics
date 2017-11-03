@@ -2,7 +2,7 @@ source 'https://rubygems.org'
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '5.1.4'
-
+gem 'pg'
 # #1
 group :production do
   # gem 'pg'
@@ -11,7 +11,6 @@ end
 
 # #2
 group :development do
-  gem 'sqlite3'
   gem 'pry-rails'
 end
 
@@ -23,6 +22,8 @@ group :development, :test do
   gem 'listen'
   gem "letter_opener"
   gem "faker"
+  gem "chartkick"
+  gem "groupdate"
 end
 
 # Use SCSS for stylesheets

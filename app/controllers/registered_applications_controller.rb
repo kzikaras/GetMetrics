@@ -12,7 +12,7 @@ class RegisteredApplicationsController < ApplicationController
     @application = Application.new 
     @application.name = params[:application][:name]
     @application.URL = params[:application][:URL]
-    @application.User_id = current_user.id
+    @application.user_id = current_user.id
     
     Application.all.each do |name|
       if name == @application.name
