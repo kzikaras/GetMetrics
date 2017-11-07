@@ -3,6 +3,8 @@ source 'https://rubygems.org'
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '5.1.4'
 gem 'pg'
+gem "chartkick"
+gem "groupdate"
 # #1
 group :production do
   # gem 'pg'
@@ -22,8 +24,7 @@ group :development, :test do
   gem 'listen'
   gem "letter_opener"
   gem "faker"
-  gem "chartkick"
-  gem "groupdate"
+  
 end
 
 # Use SCSS for stylesheets
