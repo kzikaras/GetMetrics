@@ -4,7 +4,7 @@
 BlocMetrics is an analytics application which allows users to add their web apps and track data relating to them.
 
 Javascript to add Blocmetrics to your web application:
-
+```
 var blocmetrics = {};
 blocmetrics.report = function(eventName){
     var event = {event: { name: eventName }}
@@ -17,5 +17,5 @@ blocmetrics.report = function(eventName){
 
     request.send(JSON.stringify(event));
 }
-
+```
 ![Landing image](https://i.imgur.com/mAIeUc2.png)
