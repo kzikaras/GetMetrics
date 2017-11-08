@@ -1,5 +1,5 @@
 
-**BlocMetrics**
+[<h1>BlocMetrics</h1>](https://kurtsblocmetrics.herokuapp.com/)
 
 BlocMetrics is an analytics application which allows users to add their web apps and track data relating to them.
 
@@ -17,3 +17,5 @@ blocmetrics.report = function(eventName){
 
     request.send(JSON.stringify(event));
 }
+
+![Landing image](https://i.imgur.com/mAIeUc2.png)
